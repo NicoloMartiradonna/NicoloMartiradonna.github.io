@@ -32,3 +32,7 @@
 
 ### Chuck Norris
 <a href="Chuck Norris/index.html">Utilizzo di JSON API con Chuck Norris</a><br>
+
+
+### Quiz Javascript Con KNN
+<a href="Ultimo/index.html">Quiz Javascript Con KNN</a><br>
