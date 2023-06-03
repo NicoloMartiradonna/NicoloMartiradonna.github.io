@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>QUIZ SUI PIATTI</title>
+  
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="static/js/index.js"></script>
+  <script type="text/javascript" src="static/js/libs/p5.js"></script>
+  
+</head>
+  <body>
+   
+    <h1>Che piatto sei?</h1>
+
+    <form>
+        <h3>Quale piatto ti piace?</h3>
+        <div class="Domande">
+            <input type="radio" name="question-1" id="answer-1" value="Parmigiana di melanzane" />
+            <label for="answer-1">
+                <span>Parmigiana di melanzane</span>
+            </label>
+            <input type="radio" name="question-1" id="answer-2" value="Scagliozze" />
+            <label for="answer-2">
+                <span>Scagliozze</span>
+            </label>
+            <input type="radio" name="question-1" id="answer-3" value="Popizze"/>
+            <label for="answer-3">
+                <span>Popizze</span>
+            </label>
+        </div>
+    </form>
+    
+    <form>
+        <h3>Quale ti disgusta?</h3>
+        <div class="Domande">
+            <input type="radio" name="question-2" id="answer-4" value="Pasta al pesto" />
+            <label for="answer-4">
+                <span>Pasta al pesto</span>
+            </label>
+            <input type="radio" name="question-2" id="answer-5" value="Carbonara"/>
+            <label for="answer-5">
+               <span>Carbonara</span>
+            </label>
+            <input type="radio" name="question-2" id="answer-6" value="Patate riso e cozze" />
+            <label for="answer-6">
+              <span>Patate riso e cozze</span>
+            </label>
+        </div>
+    </form>
+
+
+    <form>
+        <h3>Quale cibo ti spaventa?</h3>
+        <div class="Domande">
+            <input type="radio" name="question-3" id="answer-7" value="Lasagna" />
+            <label for="answer-7">
+                <span>Lasagna</span>
+            </label>
+            <input type="radio" name="question-3" id="answer-8" value="Crudaiola" />
+            <label for="answer-8">
+               <span>Crudaiola</span>
+            </label>
+            <input type="radio" name="question-3" id="answer-9" value="Orecchiette" />
+            <label for="answer-9">
+              <span>Orecchiette</span>
+              
+            </label>
+        </div>
+    </form>
+    
+    <form>
+        <h3>Quale ti affascina?</h3>
+        <div class="Domande">
+            <input type="radio" name="question-4" id="answer-10" value="Agnello con piselli" />
+            <label for="answer-10">
+             <span>Agnello con piselli</span>
+            </label>
+            <input type="radio" name="question-4" id="answer-11" value="Calzone di cipolle" />
+            <label for="answer-11">
+              <span>Calzone di cipolle</span>
+            </label>
+            <input type="radio" name="question-4" id="answer-12" value="Crudo di Mare"/>
+            <label for="answer-12">
+                <span>Crudo di Mare</span>
+            </label>
+        </div>
+    
+        <button type="button" class="Invia" onclick="Punteggio()">Invia</button>
+    </form>
+    
+    <div class="Risultato1"></div>
+    <div class="Risultato2"></div>
+
+  </body>
+  </html>
