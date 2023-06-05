@@ -44,6 +44,8 @@ let links = document.querySelectorAll(".gridBtn"),
 		checkWinner();
 		
 	
+		
+	
 
 		let ai = getBestMove(board, "X")
 
