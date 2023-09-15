@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>
-        Method to build websites and responsive sites
-    </h1>
+    <section id="hero" class="d-flex justify-content-center align-items-center">
+        <div class="content text-center text-white">
+            <h1>Previsioni desdfghjl tempo</h1>
+            <h2>Inserisci le coordinate per avere info sul meteo</h2>
+            <div class="formWrapper">
+                <form action="" method="get">
+                    <div class="formRow d-flex">
+                        <div class="field flex-fill me-5">
+                            <label for="lat">Latitudine</label>
+                            <input class="d-block" type="text" name="lat" id="lat" placeholder="51.44">
+                        </div>
+
+                        <div class="field flex-fill ms-5">
+                            <label for="lng">Longitudine</label>
+                            <input class="d-block" type="text" name="lng" id="lng" placeholder="51.44">
+                        </div>
+                    </div>
+
+                    <div class="formRow d-flex">
+                        <div class="field flex-fill me-5">
+                            <input class="d-block btn btn-light" type="reset" value="Reset">
+                        </div>
+
+                        <div class="field flex-fill ms-5">
+                            <input class="d-block btn btn-success" type="submit" value="Richiedi i dati">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <ul>
+                <li>2023-09-19T04:00 -> 26.2</li>
+            </ul>
+        </div>
+    </section>
 </body>
 </html>
