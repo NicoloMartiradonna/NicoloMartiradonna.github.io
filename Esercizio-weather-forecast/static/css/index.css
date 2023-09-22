@@ -1,16 +1,57 @@
 #hero {
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1920);
+    background-image: url(https://images.pexels.com/photos/3560044/pexels-photo-3560044.jpeg?auto=compress&cs=tinysrgb&w=400);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+h1, h2{
+    color: #99cbff;
+}
+
+#map {  width: 100%; 
+    height: 180px; }
+
+
+
 input {
     width: 100%;
 }
 
+
 .flex-fill {
     flex: 1 !important
 }
+
+
+.dati1{
+    color: #99cbff;
+    margin-bottom: 10%;
+}
+
+
+.Reset{
+    background-color: #99cbff;
+    width: 100%;
+}
+
+
+.dati2{
+    color: rgb(25, 135, 84)
+
+    
+}
+
+
+.Dati{
+    background-color: rgb(25, 135, 84);
+    width: 100%;
+}
+
+
+.Posizione, .Temperatura{
+    font-size: small;
+}
+
