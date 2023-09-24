@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let Posizione = document.querySelector(".Posizione");
     let temperature_2m_max;
     let temperature_2m_min;
-    let Temperatura = document.querySelector(".Temperatura");
-    let reset=document.querySelector(".Reset")
+    let Temp= document.querySelector(".Temperatura");
+    let reset=document.querySelector(".Reset");
+    let lati=document.querySelector("#lat");
+    let lon
+
 
 
     reset.addEventListener("click", function () {
-        let lati=document.querySelector("#lat");
         lati.value="";
     });
 
@@ -20,11 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (map) {
         map.remove();
       }
+
   
       map = L.map('map').setView([lati, lon], 13);
       map.on('click', function (event) {
-        let lati = event.latlng.lat;
-        let lon = event.latlng.lng;
+         lati = event.latlng.lat;
+         lon = event.latlng.lng;
         creazioneMappa(lati, lon);
       });
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -44,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       marker.on('dragend', function (event) {
         latitudine = event.target.latitude;
         longitudine = event.target.longitude;
-        Posizione.innerHTML = 'Latitudine: ' + latitudine + ', Longitudine: ' + longitudine;
-        T(latitudine, longitudine);
+        Temperature(latitudine, longitudine);
+        Posizione(latitudine, longitudine)
       });
 
       Posizione.innerHTML = 'Latitudine: ' + latitudine + ', Longitudine: ' + longitudine;
@@ -72,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     Richiesta.addEventListener("click", function (event) {
       event.preventDefault();
   
-      let lati = document.querySelector("#lat").value;
-      let lon = document.querySelector("#lng").value;
+       lati = document.querySelector("#lat").value;
+       lon = document.querySelector("#lng").value;
   
       creazioneMappa(lati, lon);
     });
@@ -92,10 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
             if(data.daily.temperature_2m_min != undefined && data.daily.temperature_2m_max != undefined){
                 temperature_2m_min=data.daily.temperature_2m_min[0];
                 temperature_2m_max=data.daily.temperature_2m_max[0];
+
                 
-                console.log(temperature_2m_max, temperature_2m_min);
+                Temp.innerHTML=`Temperatura minima: ${temperature_2m_min}, Temperatura massima ${temperature_2m_max}`;
   
             }
-        })
+        });
     }
   });
+
+ 
