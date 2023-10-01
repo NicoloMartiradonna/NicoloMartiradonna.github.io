@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let Temp= document.querySelector(".Temperatura");
     let reset=document.querySelector(".Reset");
     let lati=document.querySelector("#lat");
-    let lon
+    let lon;
+  
+
 
 
 
@@ -83,25 +85,74 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    function Temperature(latitudine, longitudine){
-        let url=`https://api.open-meteo.com/v1/forecast?latitude=${latitudine}&longitude=${longitudine}&daily=temperature_2m_min,temperature_2m_max`;
-        
-    
-        fetch(url)
-        .then(function(resp){
-            return resp.json();
-        })
-        .then(function (data){
-            if(data.daily.temperature_2m_min != undefined && data.daily.temperature_2m_max != undefined){
-                temperature_2m_min=data.daily.temperature_2m_min[0];
-                temperature_2m_max=data.daily.temperature_2m_max[0];
-
-                
-                Temp.innerHTML=`Temperatura minima: ${temperature_2m_min}, Temperatura massima ${temperature_2m_max}`;
   
+    
+
+
+
+
+function Temperature(latitudine, longitudine){
+  let url=`https://api.open-meteo.com/v1/forecast?latitude=${latitudine}&longitude=${longitudine}&daily=temperature_2m_min,temperature_2m_max`;
+  
+
+  fetch(url)
+  .then(function(resp){
+      return resp.json();
+  })
+  .then(function (data){
+      if(data.daily.temperature_2m_min != undefined && data.daily.temperature_2m_max != undefined){
+          temperature_2m_min=data.daily.temperature_2m_min[0];
+          temperature_2m_max=data.daily.temperature_2m_max[0];
+
+
+          
+          config.data.datasets[0].data=[temperature_2m_min, temperature_2m_max];
+
+
+        
+          
+          Temp.innerHTML=`Temperatura minima: ${temperature_2m_min}, Temperatura massima ${temperature_2m_max}`;
+
+        
+      }
+  });
+}
+
+let canvas = document.querySelector("#myChart")
+
+let config = {
+    type: 'line',
+    data: {
+      label:[],
+        datasets: [
+            {
+                label: 'Temperatura media',
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1,
+                yAxisID: 'y',
+            },
+            {
+                fill: false,
+                borderColor: 'rgb(255, 0, 0)',
+                tension: 0.1,
+                yAxisID: 'y1',
             }
-        });
+        ]
+    },
+    scales: {
+        y: {
+            type: 'linear',
+            position: 'left',
+        },
+        y1: {
+            type: 'linear',
+            position: ''
+        }
     }
+}
+const myChart = new Chart(canvas, config)
+
   });
 
  

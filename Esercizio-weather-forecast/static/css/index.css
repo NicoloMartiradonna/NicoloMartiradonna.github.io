@@ -55,3 +55,11 @@ input {
 .Posizione, .Temperatura{
     font-size: small;
 }
+
+
+
+#canvasWrapper canvas {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
