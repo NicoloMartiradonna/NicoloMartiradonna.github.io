@@ -2,10 +2,10 @@
 session_start();
 
 $users = [
-    ['id' => 1, 'name' => 'John Doe'],
-    ['id' => 2, 'name' => 'Jane Doe'],
-    ['id' => 3, 'name' => 'Alice'],
-    ['id' => 4, 'name' => 'Bob'],
+    ['id' => 1, 'name' => 'David'],
+    ['id' => 2, 'name' => 'Leonard'],
+    ['id' => 3, 'name' => 'Christopher'],
+    ['id' => 4, 'name' => 'Rachel'],
 ];
 
 $response=[
