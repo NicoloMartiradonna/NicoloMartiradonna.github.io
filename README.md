@@ -31,6 +31,8 @@
 <a href="Introduzione/index.html">Esercizio: Introduzione a JSON</a><br>
 
 
+
+
 ### Chuck Norris
 <a href="Chuck Norris/index.html">Utilizzo di JSON API con Chuck Norris</a><br>
 
@@ -41,3 +43,8 @@
 
 ### Esercizio weather forecast
 <a href="Esercizio-weather-forecast/index.html">Esercizio weather forecast</a><br>
+
+
+
+### Esercizio API
+<a href="esercizioAPI/index.html">Esercizio API</a><br>
