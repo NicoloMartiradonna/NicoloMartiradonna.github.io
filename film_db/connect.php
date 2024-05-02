@@ -15,7 +15,7 @@ if ($mysqli->connect_errno) {
 $query = "INSERT INTO regista (nome, cognome, data_nascita) VALUES ('Mario', 'Rossi', '20-09-1992')";
 
 if ($conn->query($query) === TRUE) {
-  echo "Record inserito con successo";
+  echo "Inserimento effettuato con successo";
 } else {
   echo "Errore: " . $query . "<br>" . $conn->error;
 }
