@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        background-image: url('img/pubblicaviaggio.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    form {
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        width: 300px; 
+        margin: auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 1px; 
+    }
+
+    input, button {
+        display: block;
+        width: calc(100% + 30px);
+        margin-bottom: 5px; 
+        margin-top: 1px;
+    }
+
+    button {
+        background-color: #b66b36; 
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #A0522D; 
+    }
+    </style>
+</head>
+<body>
+
+<form action="pubblica_viaggio.php" method="post">
+    <label for="datainizioviaggio">Data Inizio Viaggio:</label>
+    <input type="date" id="datainizioviaggio" name="datainizioviaggio" required>
+    <label for="datafine">Data Fine:</label>
+    <input type="date" id="datafine" name="datafine" required>
+    <label for="cittapartenza">Citta' di partenza:</label>
+    <input type="text" id="cittapartenza" name="cittapartenza" required>
+    <label for="cittaarrivo">Citta' di arrivo:</label>
+    <input type="text" id="cittaarrivo" name="cittaarrivo" required>
+    <label for="prezzo">Prezzo:</label>
+    <input type="number" id="prezzo" name="prezzo" min="1" required>
+    <label for="npostiviaggio">Posti viaggio:</label>
+    <input type="number" id="npostiviaggio" name="npostiviaggio" min="1" required>
+    <label for="bagaglio">Bagaglio:</label>
+    <input type="text" id="bagaglio" name="bagaglio" required>
+    <label for="animali">Animali:</label>
+    <input type="checkbox" id="animali" name="animali">
+    <label for="fumatori">Fumatori:</label>
+    <input type="checkbox" id="fumatori" name="fumatori">
+    <button type="submit">Pubblica</button>
+</form>
+
+</body>
+</html>

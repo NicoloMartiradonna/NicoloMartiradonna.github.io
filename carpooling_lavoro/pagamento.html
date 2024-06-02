@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <style>
+        body{
+            background-image: url('img/pagamento.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 300px; 
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+        
+        input, label, button {
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <form action="pagamento.php" method="post">
+        <input type="text" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="text" id="recapito" name="recapito_telefonico" placeholder="Recapito telefonico" required>
+        <select name="metodo_pagamento" required>
+            <option value="PayPal">PayPal</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Visa">Visa</option>
+        </select>
+        <button type="submit" name="pay">Paga</button>
+    </form>
+</body>
+</html>
