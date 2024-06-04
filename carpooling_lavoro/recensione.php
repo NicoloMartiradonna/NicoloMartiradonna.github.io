@@ -16,8 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($gestionedata) {
             
             $gestionedata->bind_param("ds", $voto, $descrizione);
-
-            
             $gestionedata->execute();
 
             
